@@ -1,0 +1,8 @@
+*
+!/.antibody
+!/.antibody/*
+!/.gitignore.d
+!/.gitignore.d/zsh
+!/.zsh
+!/.zsh/*
+!/.zshrc
