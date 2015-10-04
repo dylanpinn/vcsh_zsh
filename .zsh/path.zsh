@@ -14,3 +14,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# GO
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$GOPATH/bin
