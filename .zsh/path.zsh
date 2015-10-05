@@ -21,7 +21,9 @@ else
 fi
 
 # pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv > /dev/null; then
+  eval "$(pyenv init -)";
+fi
 
 # GO
 export GOPATH=$HOME/dev/go
