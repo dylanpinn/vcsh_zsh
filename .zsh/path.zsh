@@ -1,7 +1,11 @@
 #!/bin/zsh
 
-# Antibody (OSX)
-source "$(brew --prefix)/share/antibody.zsh"
+# Antibody
+if [ "$(uname -s)" = "Darwin" ]; then
+  source "$(brew --prefix)/share/antibody.zsh"
+else
+  source "$HOME/.antibody/antibody/antibody.zsh"
+fi
 
 # rbenv
 if which rbenv > /dev/null;
@@ -10,7 +14,11 @@ fi
 
 # nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if [ "$(uname -s)" = "Darwin" ]; then
+  source $(brew --prefix nvm)/nvm.sh
+else
+  source "$HOME/.nvm/nvm.sh"
+fi
 
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
