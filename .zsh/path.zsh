@@ -32,9 +32,24 @@ if which pyenv > /dev/null; then
   eval "$(pyenv init -)";
 fi
 
+# pyenv-virtualenv
+if which pyenv-virtualenv-init > /dev/null; then
+  eval "$(pyenv virtualenv-init -)";
+fi
+
 # GO
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:$GOPATH/bin
 
 # Composer
 export PATH=$PATH:$HOME/.composer/vendor/bin
+
+# Autoenv
+if [ "$(uname -s)" = "Darwin" ]; then
+  source /usr/local/opt/autoenv/activate.sh
+fi
+
+# iTerm 2
+if [ "$(uname -s)" = "Darwin" ]; then
+  test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+fi
