@@ -8,6 +8,9 @@ else
 fi
 
 # rbenv
+if ! [ "$(uname -s)" = "Darwin" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+fi
 if which rbenv > /dev/null;
   then eval "$(rbenv init -)";
 fi
@@ -21,6 +24,10 @@ else
 fi
 
 # pyenv
+if ! [ "$(uname -s)" = "Darwin" ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+fi
 if which pyenv > /dev/null; then
   eval "$(pyenv init -)";
 fi
