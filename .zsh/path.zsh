@@ -47,6 +47,8 @@ export PATH=$PATH:$HOME/.composer/vendor/bin
 # Autoenv
 if [ "$(uname -s)" = "Darwin" ]; then
   source /usr/local/opt/autoenv/activate.sh
+else
+  source ~/.autoenv/activate.sh
 fi
 
 # iTerm 2
