@@ -15,6 +15,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' insert-tab pending
 
 # AWS cli
-if ! [ "$(uname -s)" = "Darwin" ]; then
+if [ "$(uname -s)" = "Darwin" ]; then
   source /usr/local/share/zsh/site-functions/_aws
 fi
