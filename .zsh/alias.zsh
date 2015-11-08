@@ -5,3 +5,6 @@ __reload_dotfiles() {
   cd ... || exit
 }
 alias reload!='__reload_dotfiles'
+
+# Syntax highlighting colorzing cat
+alias dog='pygmentize -g'
